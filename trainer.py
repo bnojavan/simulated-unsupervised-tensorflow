@@ -3,7 +3,7 @@ import numpy as np
 from tqdm import trange
 import tensorflow as tf
 from tensorflow.contrib.framework.python.ops import arg_scope
-
+from functools import reduce
 from model import Model
 from buffer import Buffer
 import data.gaze_data as gaze_data
