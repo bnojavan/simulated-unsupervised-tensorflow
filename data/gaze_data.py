@@ -111,7 +111,7 @@ def maybe_preprocess(config, data_path, sample_path=None):
             x_min, x_max = int(min(j[key][:,0])), int(max(j[key][:,0]))
             y_min, y_max = int(min(j[key][:,1])), int(max(j[key][:,1]))
 
-            x_center, y_center = (x_min + x_max)/2, (y_min + y_max)/2
+            x_center, y_center = int((x_min + x_max)/2), int((y_min + y_max)/2)
 
             cropped_img = img[y_center-42: y_center+42, x_center-70:x_center+70]
             img_path = jpg_path.replace(".jpg", "_cropped.png")
