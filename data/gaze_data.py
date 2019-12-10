@@ -90,9 +90,9 @@ def maybe_preprocess(config, data_path, sample_path=None):
         json_paths = glob(os.path.join(
             data_path, '{}/*.json'.format(config.synthetic_image_dir)))
 
-        assert len(jpg_paths) >= max_synthetic_num, \
-            "[!] # of synthetic data ({}) is smaller than max_synthetic_num ({})". \
-                format(len(jpg_paths), max_synthetic_num)
+        #assert len(jpg_paths) >= max_synthetic_num, \
+            #"[!] # of synthetic data ({}) is smaller than max_synthetic_num ({})". \
+                #format(len(jpg_paths), max_synthetic_num)
 
         json_paths = json_paths[:max_synthetic_num]
         for json_path in tqdm(json_paths):
